@@ -85,10 +85,10 @@ input,button{
 }
 
 /* New Task */
-label[for="new-task"] {
+/* label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
-}
+} */
 #new-task {
   width: 318px;
 }
@@ -106,10 +106,10 @@ label[for="new-task"] {
   vertical-align: middle;
 }
 
-.task-item > input[type="checkbox"] {
+.task-item > .task-checkbox {
   margin: 0 10px;
 }
-li > label {
+.task-item > .task-name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -134,15 +134,15 @@ ul#completed-tasks label {
 }
 
 /* Edit Task */
-/* .task-input {
+.task-input-edit {
   display: none;
-} */
+}
 
 .task-edit .task-input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+ul li.task-edit label {
   display: none;
 }
