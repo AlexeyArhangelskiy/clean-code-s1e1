@@ -1,9 +1,4 @@
-/* Basic Style */
-body {
-  background-color: #f8f8f8;
-  color: #333;
-  font-family: Lato, sans-serif;
-}
+/* RESETTING THE DEFAULT STYLES */
 ul,
 li,
 h2 {
@@ -11,8 +6,14 @@ h2 {
   padding: 0px;
   list-style: none;
 }
-input,button{
+input,
+button {
   outline: none;
+}
+.root {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
 }
 .eisenhower-desc {
   width: 500px;
@@ -26,7 +27,6 @@ input,button{
 .eisenhower-desc__link {
   font-family: fantasy, cursive;
 }
-
 @media (max-width:768px) {
   .eisenhower-desc {
     text-align: center;
@@ -55,7 +55,6 @@ input,button{
 .task-item__btn:hover {
   color: #3a3a3a;
 }
-/* Heading */
 .main-page__title {
   color: #333;
   font-weight: 700;
@@ -80,8 +79,6 @@ input,button{
 .task-item__input:focus {
   color: #333;
 }
-
-/* Task list */
 .task-item {
   overflow: hidden;
   padding: 20px 0;
@@ -93,7 +90,6 @@ input,button{
 .task-item > * {
   vertical-align: middle;
 }
-
 .task-item > .task-item__checkbox {
   margin: 0 10px;
 }
@@ -102,7 +98,6 @@ input,button{
   box-sizing: border-box;
   font-size: 18px;
 }
-
 .task-item__btn_del .task-item__img {
   height: 2em;
   transform: rotateZ(45deg);
@@ -111,22 +106,16 @@ input,button{
 .task-item__btn_del:hover .task-item__img {
   transform: rotateZ(0);
 }
-
 .task-item_add {
   border: 0;
 }
-
-/* Completed */
 .tasks_completed .task-item__name {
   text-decoration: line-through;
   color: #888;
 }
-
-/* Edit Task */
 .task-item__input_edit {
   display: none;
 }
-
 .task-item_edit .task-item__input {
   display: inline-block;
 }
