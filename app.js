@@ -34,20 +34,20 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task-name';
+    label.className='task-item__name';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="task-checkbox";
+    checkBox.className="task-item__checkbox";
     editInput.type="text";
-    editInput.classList.add("task-input", "task-input_edit");
+    editInput.classList.add("task-item__input", "task-item__input_edit");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="task-btn task-btn_edit";
+    editButton.className="task-item__btn task-item__btn_edit";
 
-    deleteButton.className="task-btn task-btn_del";
+    deleteButton.className="task-item__btn task-item__btn_del";
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.className='task-btn__img';
+    deleteButtonImg.className='task-item__img';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,7 +87,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".task-btn_edit");
+    var editBtn=listItem.querySelector(".task-item__btn_edit");
     var containsClass=listItem.classList.contains("task-item_edit");
     //If class of the parent is .editmode
     if(containsClass){
@@ -159,8 +159,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector(".task-btn_edit");
-    var deleteButton=taskListItem.querySelector(".task-btn_del");
+    var editButton=taskListItem.querySelector(".task-item__btn_edit");
+    var deleteButton=taskListItem.querySelector(".task-item__btn_del");
 
 
     //Bind editTask to edit button.
